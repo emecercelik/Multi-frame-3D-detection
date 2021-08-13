@@ -1,0 +1,9 @@
+Cython
+contextlib2
+jupyter
+matplotlib
+pillow
+scipy
+pycocotools
+tf_slim
+openpyxl
