@@ -16,7 +16,7 @@ The installation requirements are pointed in the [Docker](#docker) section and t
 
 <table>
     <tr><td>
-<img src="figures/method.png" alt="Multi-frame feature alignment network" 	title="Multi-frame feature alignment network" width="1192" height="809" />
+<img src="figures/architecture.png" alt="Multi-frame feature alignment network" 	title="Multi-frame feature alignment network" width="1192" height="809" />
     </td></tr>
 </table>
 
