@@ -14,13 +14,10 @@ log_v1*
 .ipynb_checkpoints
 __pycache__/*
 __pycache__
-bmw_data/tfrecords.zip
 search_tracking.sh
 frustum_tests
 frustum_tests/*
 Untitled.ipynb
 *.png
-urban-master
-urban-master/*
-visualization_of_frustum/bmw_data
-visualization_of_frustum/bmw_data/*
+detection_2d/deep_sort/detector/YOLOv3/weight
+*.pth

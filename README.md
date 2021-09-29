@@ -29,6 +29,44 @@ docker pull emecercelik/tum-i06-object_detection:faster_frustum_nonroot_v3
 ``` 
 The docker image can be run with the dataset-related volume mounts as shown in "run_docker.sh" file. This mounting example is compatible with the example shell scripts given in the sections below for running architecture. 
 
+## <a name="2d-tracking"></a>2D Detection with KITTI Tracking Dataset
+The training pipeline for 2D detection and tracking pipeline uses Tensorflow Object Detection (TF OD) API's pipeline. Therefore, please refer to the README.md file in detection_2d folder for 2D detection and tracking with KITTI. Downloading KITTI dataset is the same as explanation below.  
+
+<ol>
+<li> Download dataset </li>
+
+The KITTI Multi-object Tracking Dataset (Tracking dataset) can be downloaded using the links in the official [website](http://www.cvlibs.net/datasets/kitti/eval_tracking.php) of KITTI. To use with this Faster RCNN module, the [left color images](http://www.cvlibs.net/download.php?file=data_tracking_image_2.zip) and [training labels](http://www.cvlibs.net/download.php?file=data_tracking_label_2.zip) should be downloaded.
+
+Downloaded zip files should be extracted in the same root_dir to have the following path order (0000,0001,... are drive indices and 000000,000001,... are frame indices):
+
+```
+root_dir
+	data_tracking_image_2
+		training
+			image_02
+				0000
+					000000.png
+					...
+				0001
+					000000.png
+					...
+				...
+		testing
+			image_02
+				...
+	data_tracking_label_2
+		training
+			label_02
+				0000.txt
+				0001.txt
+				...
+```
+
+<li>Generating rgb_detection file</li>
+To test Temp-Frustum Net on data without ground-truths, the rgb_detection.txt files should be prepared, which contains predicted 2D bounding boxes to generate frustum pickle file that is consumed by Temp-Frustum Net test. For detailed explanation of generating rgb_detection files, please check [this item](#3d-tracking). 
+
+</ol>
+
 
 ## <a name="3d-tracking"></a>3D Detection with KITTI Tracking Dataset
 <ol>

@@ -19,10 +19,6 @@ kitti_root_tracking="/media/HDD/tracking_dataset/KITTI/"
 root_3d_log="/media/HDD2/trainings/frustum_pointnet"
 # Path where the 3d detection log files are generated
 root_2d_log="/media/HDD2/trainings/tf_frcnn"
-# Path to bmw data
-root_bmw_tracking="/media/HDD/datasets/bmw_data/kitti_format_tracking"
-# Path to the folder where bmw tfrecord files are kept
-root_bmw_tfrecord="/media/HDD/datasets/bmw_data"
 # Path to the codes
 frustum_framework="/home/emec/Desktop/projects/frustum_framework"
 docker run -it --gpus all --rm  -v $obj_det_tfrecords:/obj_det_tfrecords \
@@ -33,8 +29,6 @@ docker run -it --gpus all --rm  -v $obj_det_tfrecords:/obj_det_tfrecords \
 				-v $root_3d_log:/root_3d_log \
 				-v $root_2d_log:/root_2d_log \
 				-v $frustum_framework:/frustum_framework \
-				-v $root_bmw_tracking:/root_bmw_tracking \
-				-v $root_bmw_tfrecord:/root_bmw_tfrecord \
 				-p $JupyHostPort:8888 \
 				-p $TboardHostPort:6006 \
 				emecercelik/tum-i06-object_detection:mmdetection3d
